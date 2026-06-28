@@ -40,7 +40,6 @@ def download_dataset(dataset, path):
 
 
 def main() -> None:
-    DATA_DIR = "../data"
     parser = argparse.ArgumentParser(prog="dataset.py",
                                      description= "Dataset downloading and preprocessing module for the Diffusion Transformer.")
     parser.add_argument("-r", "--raw", action="store_true", help="Download the raw dataset.")
