@@ -16,7 +16,7 @@ Usage from the command line:
 import argparse
 from datasets import load_dataset
 from src.config import RAW_DATA_DIR, CLEAN_DATA_DIR
-
+from src.utils import get_logger
 
 def create_data_dir():
     RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
@@ -46,11 +46,14 @@ def main() -> None:
     parser.add_argument("-v", "--verbose", action="count", default=0, help="Verbosity level")  #  future implementation
 
     args = parser.parse_args()
+
+    logger = get_logger(__name__, args.verbose)
+    
     create_data_dir()
 
     raw_dataset = load_raw_dataset()
     
-    if parser.raw:
+    if args.raw:
         download_dataset(raw_dataset, path = RAW_DATA_DIR)
         return
 
