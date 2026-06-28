@@ -46,6 +46,7 @@ def main() -> None:
     parser.add_argument("-r", "--raw", action="store_true", help="Download the raw dataset.")
     parser.add_argument("-v", "--verbose", action="count", default=0, help="Verbosity level")  #  future implementation
 
+    args = parser.parse_args()
     create_data_dir()
 
     raw_dataset = load_raw_dataset()
