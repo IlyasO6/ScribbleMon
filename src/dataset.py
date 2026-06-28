@@ -15,7 +15,7 @@ Usage from the command line:
 
 import argparse
 from datasets import load_dataset
-from constants import RAW_DATA_DIR, CLEAN_DATA_DIR
+from src.config import RAW_DATA_DIR, CLEAN_DATA_DIR
 
 
 def create_data_dir():
