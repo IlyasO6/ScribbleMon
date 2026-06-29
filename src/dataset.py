@@ -15,8 +15,8 @@ Usage from the command line:
 
 import argparse
 from datasets import load_dataset
-from src.config import RAW_DATA_DIR, CLEAN_DATA_DIR
-from src.utils import get_logger
+from config import RAW_DATA_DIR, CLEAN_DATA_DIR
+from utils import get_logger
 
 def create_data_dir():
     RAW_DATA_DIR.mkdir(parents=True, exist_ok=True)
